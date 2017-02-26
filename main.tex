@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt]{article} %ðàçìåð áóìàãè óñòàíàâëèâàåì À4, øðèôò 12ïóíêòîâ
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}	%êîäèðîâêà
+\usepackage[english,russian]{babel}%èñïîëüçóåì ðóññêèé è àíãëèéñêèé ÿçûêè ñ ïåðåíîñàìè
+\usepackage{pscyr}
+\usepackage{amssymb,amsfonts,amsmath,cite,enumerate,float,indentfirst} %ïàêåòû ðàñøèðåíèé
+\usepackage{graphicx} %âñòàâêà ãðàôèêè
+\graphicspath{{img_source/}}%ïóòü ê ðèñóíêàì
+
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.} % Çàìåíÿåì áèáëèîãðàôèþ ñ êâàäðàòíûõ ñêîáîê íà òî÷êó:
+\makeatother
+
+\usepackage{geometry} % Ìåíÿåì ïîëÿ ñòðàíèöû
+\geometry{left=2cm}% ëåâîå ïîëå
+\geometry{right=1.5cm}% ïðàâîå ïîëå
+\geometry{top=1cm}% âåðõíåå ïîëå
+\geometry{bottom=2cm}% íèæíåå ïîëå
+
+\renewcommand{\theenumi}{\arabic{enumi}}% Ìåíÿåì âåçäå ïåðå÷èñëåíèÿ íà öèôðà.öèôðà
+\renewcommand{\labelenumi}{\arabic{enumi}}% Ìåíÿåì âåçäå ïåðå÷èñëåíèÿ íà öèôðà.öèôðà
+\renewcommand{\theenumii}{.\arabic{enumii}}% Ìåíÿåì âåçäå ïåðå÷èñëåíèÿ íà öèôðà.öèôðà
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Ìåíÿåì âåçäå ïåðå÷èñëåíèÿ íà öèôðà.öèôðà
+\renewcommand{\theenumiii}{.\arabic{enumiii}}% Ìåíÿåì âåçäå ïåðå÷èñëåíèÿ íà öèôðà.öèôðà
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Ìåíÿåì âåçäå ïåðå÷èñëåíèÿ íà öèôðà.öèôðà
+
+\newcommand{\imgh}[3]{\begin{figure}[h]\center{\includegraphics[width=#1]{#2}}\caption{#3}\label{ris:#2}\end{figure}}
+
+\begin{document}
+	\include{title_page}
+	\setcounter{page}{2}
+	% Ñîäåðæàíèå
+	\tableofcontents
+	\include{work}
+	
+\end{document}
